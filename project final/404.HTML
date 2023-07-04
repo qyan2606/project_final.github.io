@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://c8.alamy.com/comp/T6KGFE/404-error-page-not-found-vector-plug-graphic-background-T6KGFE.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 5vw;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 3vw;
+            color: #fff;
+            margin-bottom: 4vw;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1.5vw 3vw;
+            font-size: 2.5vw;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 8vw;
+            }
+
+            p {
+                font-size: 5vw;
+                margin-bottom: 8vw;
+            }
+
+            .button {
+                padding: 3vw 6vw;
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>404 Not Found</h1>
+            <p>The page you requested could not be found.</p>
+            <a href="../project final/index.html" class="button">Go Back to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        // Membuat animasi muncul setelah halaman selesai dimuat
+        window.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('.container');
+            container.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
